@@ -1,10 +1,7 @@
 from dataclasses import dataclass
-from collections import defaultdict
 from functools import total_ordering
 from pathlib import Path
 import argparse
-
-import joblib
 
 from boltons.iterutils import remap
 
@@ -12,7 +9,6 @@ from dougu import (
     cached_property,
     flatten,
     )
-from dougu.decorators import hdf5_cached_property
 
 
 def argsparser():
@@ -73,7 +69,6 @@ class DenseIndex:
             ]
         return '.'.join(fields)
 
-    # @hdf5_cached_property(fname_tpl='{conf_str}.hdf5')
     @property
     def vectors(self):
         print(f'encoding {len(self.keys)} keys')
