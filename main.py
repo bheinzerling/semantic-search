@@ -43,7 +43,7 @@ def to_keys_and_ids(data, token_sep=''):
 if __name__ == '__main__':
     # example data from a Japanese UD treebank
     data_file = Path('data/ja_gsd-ud-dev.txt')
-    # small number of texts since this is just toy example
+    # small number of texts since this is just a toy example
     max_texts = 10
 
     # use a spacy model for Japanese
